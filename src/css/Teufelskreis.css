@@ -1,0 +1,13 @@
+.background {
+    height: calc(100% - 60px);
+}
+
+.name {
+    height: 60px;
+    padding: auto;
+}
+
+.card {
+    height: 200px;
+    width: 100px;
+}
