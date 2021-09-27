@@ -1,8 +1,8 @@
 .background {
-    height: calc(100% - 60px);
+    
 }
 
-.name {
+.header {
     height: 60px;
     padding: auto;
 }
