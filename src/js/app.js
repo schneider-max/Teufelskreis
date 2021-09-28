@@ -17,8 +17,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     card.addEventListener("click", function(){
 
+        let allImg = src/img;
         // Value vom Sourcen Ordner zurgreifen
-
+        allImg[1]
         
     });
 });
