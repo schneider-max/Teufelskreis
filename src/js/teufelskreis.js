@@ -1,5 +1,5 @@
 function fisherYates(pictures) {
-    for (let i = 0; i < array.length - 1; i++){
+    for (let i = 0; i < pictures.length - 1; i++){
         let tmpcard = pictures[i];
         let tmpRandom = Math.floor(Math.random() * (pictures.length - i)) + i;
         let help = tmpcard;
@@ -10,16 +10,16 @@ function fisherYates(pictures) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    let card = document.getElementById("Karten");
+    let tmpNext = document.getElementById("card");
     let pictures;
 
-    fisherYates(pictures);  
+    //fisherYates(pictures);  
 
-    card.addEventListener("click", function(){
+    tmpNext.addEventListener("click", function(){
 
-        let allImg = src/img;
+        let allImg = ;
         // Value vom Sourcen Ordner zurgreifen
-        allImg[1]
+        allImg[1];
         
     });
 });
