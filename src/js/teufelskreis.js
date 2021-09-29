@@ -10,16 +10,23 @@ function fisherYates(pictures) {
     }
 }
 let index = 0;
+let gPictures;
 
 document.addEventListener("DOMContentLoaded", function () {
-    let allImg = document.getElementsByClassName("image");
     let tmpNext = document.getElementById("card");
     let btnStart = document.getElementById("start");
+    let allImg = document.getElementsByClassName("image");
 
     btnStart.addEventListener("click", function() {
-        allImg[index].style.display = "";
+        for (let i = 0; i < allImg.length - 1; i++){
+            let tmpcard = allImg[i];
+            let tmpRandom = Math.floor(Math.random() * (allImg.length - i)) + i;
+    
+            allImg[i] = allImg[tmpRandom];
+            allImg[tmpRandom] = tmpcard; 
+        }
         btnStart.style.display = "none";
-        fisherYates(allImg);
+        allImg[index].style.display = "";
     })
 
     tmpNext.addEventListener("click", function(){
