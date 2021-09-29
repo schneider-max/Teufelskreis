@@ -6,20 +6,27 @@ function fisherYates(pictures) {
 
         tmpcard = pictures[tmpRandom];
         pictures[tmpRandom] = help; 
+        return pictures;
     }
 }
+let index = 0;
 
 document.addEventListener("DOMContentLoaded", function () {
+    let allImg = document.getElementsByClassName("image");
     let tmpNext = document.getElementById("card");
-    let pictures;
+    let btnStart = document.getElementById("start");
 
-    //fisherYates(pictures);  
+    btnStart.addEventListener("click", function() {
+        allImg[index].style.display = "";
+        btnStart.style.display = "none";
+        fisherYates(allImg);
+    })
 
     tmpNext.addEventListener("click", function(){
 
-        let allImg = ;
         // Value vom Sourcen Ordner zurgreifen
-        allImg[1];
-        
+        allImg[index].style.display = "none";
+        index = index + 1;
+        allImg[index].style.display = "";
     });
 });
